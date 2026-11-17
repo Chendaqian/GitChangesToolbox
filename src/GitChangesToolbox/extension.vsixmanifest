@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
 	<Metadata>
-		<Identity Id="GitChangesToolbox.Probe" Version="1.7" Language="en-US" Publisher="Local" />
+		<Identity Id="GitChangesToolbox.Probe" Version="1.7" Language="en-US" Publisher="GitChangesToolbox" />
 		<DisplayName>Git Changes Toolbox</DisplayName>
 		<Description xml:space="preserve">Adds collapse/expand and locate buttons to the Visual Studio Git Changes window.</Description>
 		<MoreInfo>https://github.com/Chendaqian/GitChangesToolbox</MoreInfo>
