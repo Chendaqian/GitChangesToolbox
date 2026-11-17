@@ -14,7 +14,7 @@ Git Changes Toolbox is a Visual Studio 2022 extension that adds two toolbar butt
 - Expand: click the same button again in the collapsed state to expand all folders; the icon and tooltip switch with the state
 - Locate: reads the active document path, expands its parent folders, selects the file and scrolls it into view
 - Shows a status bar message when the current file is not in the change list
-- Buttons use Visual Studio theme icons and a borderless hover style, inserted at the front of the window's top toolbar
+- Buttons use Visual Studio theme icons and a borderless hover style, inserted right before the Commit All button
 
 ## Requirements
 
@@ -28,7 +28,7 @@ Close Visual Studio, double-click `GitChangesToolbox.vsix` in the publish folder
 
 ## Usage
 
-Open View → Git Changes. Two icon buttons appear at the front of the window's top toolbar:
+Open View → Git Changes. Two icon buttons appear right before the Commit All button:
 
 | Button | Behavior |
 | --- | --- |
@@ -67,7 +67,7 @@ Visual Studio exposes no extension point for the Git Changes window, so the exte
 - The change list lives in `IndentedItemListView` inside `FileListView`, with data items of type `GitPendingChangeNode`
 - Collapse and expand invoke the owning ViewModel's `ExpanderCommand` so the list rebuilds itself
 - Locate matches the node's `ItemPath` against the document path, expands ancestors one level at a time, then sets the selection and calls `ScrollIntoView`
-- Buttons are injected into the top toolbar's `buttonPanel`
+- Buttons are injected before the Commit All button, falling back to the top toolbar's `buttonPanel`
 
 All access to internal types goes through reflection; `Microsoft.TeamFoundation.Git.Controls.dll` is never referenced directly.
 

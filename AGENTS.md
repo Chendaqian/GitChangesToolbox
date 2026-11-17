@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目
 
-Git Changes Toolbox 是一个 Visual Studio 2022 VSIX 扩展，在「Git 更改」窗口顶部工具栏注入两个图标按钮：折叠/展开更改树、定位当前文件。
+Git Changes Toolbox 是一个 Visual Studio 2022 VSIX 扩展，在「Git 更改」窗口的「全部提交」按钮前注入两个图标按钮：折叠/展开更改树、定位当前文件。
 
 - C# 7.3，.NET Framework 4.7.2，WPF
 - SDK 风格 csproj（`Microsoft.NET.Sdk`）：新增 `.cs` 文件自动包含，不必改 csproj
@@ -42,7 +42,7 @@ $ErrorActionPreference = 'Stop'
 三个类分工：
 
 - `GitChangesToolboxPackage`：`AsyncPackage`，用 `ProvideAutoLoad(SolutionExists)` 在打开解决方案时加载。
-- `GitChangesToolbar`：`DispatcherTimer` 每 3 秒扫描一次 Git 窗口可视树，找到顶部工具栏 `buttonPanel` 后把两个按钮插到最前面；按钮用 `CrispImage` 加自定义扁平样式（`EnvironmentColors.ToolWindowButtonHoverActiveBrushKey`）。
+- `GitChangesToolbar`：`DispatcherTimer` 每 3 秒扫描一次 Git 窗口可视树，找到「全部提交」按钮（`commitButton`）后把两个按钮插到它前面；找不到时退回顶部工具栏 `buttonPanel` 最前面。按钮用 `CrispImage` 加自定义扁平样式（`EnvironmentColors.ToolWindowButtonHoverActiveBrushKey`）。
 - `GitChangesController`：所有 VS 内部对象的查找和反射访问。
 
 VS 2022 17.14 实测的内部结构：

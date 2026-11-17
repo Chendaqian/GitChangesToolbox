@@ -14,7 +14,7 @@ Git Changes Toolbox 是一个 Visual Studio 2022 扩展，为「Git 更改」窗
 - 展开：折叠状态下再次点击同一按钮展开全部文件夹，图标和提示文字随之切换
 - 定位：读取当前活动文档路径，在更改列表中展开父级文件夹、选中并滚动到对应文件
 - 当前文件不在更改列表时，状态栏会提示
-- 按钮使用 Visual Studio 主题图标和无边框悬停样式，插入在窗口顶部工具栏最前面
+- 按钮使用 Visual Studio 主题图标和无边框悬停样式，插入在「全部提交」按钮前面
 
 ## 支持环境
 
@@ -28,7 +28,7 @@ Git Changes Toolbox 是一个 Visual Studio 2022 扩展，为「Git 更改」窗
 
 ## 使用
 
-打开「视图 → Git 更改」，窗口顶部工具栏最前面会出现两个图标按钮：
+打开「视图 → Git 更改」，「全部提交」按钮前面会出现两个图标按钮：
 
 | 按钮 | 行为 |
 | --- | --- |
@@ -67,7 +67,7 @@ Visual Studio 没有给「Git 更改」窗口开放扩展点，本扩展通过�
 - 更改列表位于 `FileListView` 内的 `IndentedItemListView`，数据项类型为 `GitPendingChangeNode`
 - 折叠和展开调用节点所属 ViewModel 的 `ExpanderCommand`，让列表自行重建
 - 定位按节点的 `ItemPath` 匹配文档路径，逐级展开祖先后设置选中并调用 `ScrollIntoView`
-- 按钮注入到窗口顶部工具栏的 `buttonPanel`
+- 按钮注入到「全部提交」按钮前面，找不到时退回顶部工具栏的 `buttonPanel`
 
 所有对内部类型的访问都使用反射，没有硬引用 `Microsoft.TeamFoundation.Git.Controls.dll`。
 

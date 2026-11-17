@@ -4,7 +4,7 @@
 
 ## 中文
 
-Git Changes Toolbox 是一款 Visual Studio 2022 扩展，在「Git 更改」窗口顶部工具栏加入两个按钮，折叠、展开和定位文件都不用再翻菜单。
+Git Changes Toolbox 是一款 Visual Studio 2022 扩展，在「Git 更改」窗口加入两个按钮，折叠、展开和定位文件都不用再翻菜单。
 
 - 一键折叠所有已展开的文件夹
 - 折叠状态下再次点击，展开全部文件夹，图标和提示文字同步切换
@@ -13,7 +13,7 @@ Git Changes Toolbox 是一款 Visual Studio 2022 扩展，在「Git 更改」窗
 - 按钮使用 Visual Studio 主题图标和无边框悬停样式，与原生工具栏融为一体
 - 窗口内容重建后按钮自动补回
 
-打开「视图 > Git 更改」，两个按钮出现在窗口顶部工具栏最前面。
+打开「视图 > Git 更改」，两个按钮出现在「全部提交」按钮前面。
 
 支持以下版本：
 
@@ -25,7 +25,7 @@ Git Changes Toolbox 是一款 Visual Studio 2022 扩展，在「Git 更改」窗
 
 ## English
 
-Git Changes Toolbox is a Visual Studio 2022 extension that adds two buttons to the top toolbar of the Git Changes window, so collapsing the tree and finding the active file no longer take extra clicks.
+Git Changes Toolbox is a Visual Studio 2022 extension that adds two buttons to the Git Changes window, so collapsing the tree and finding the active file no longer take extra clicks.
 
 - Collapse every expanded folder in one click
 - Click again in the collapsed state to expand all folders; the icon and tooltip switch with the state
@@ -34,7 +34,7 @@ Git Changes Toolbox is a Visual Studio 2022 extension that adds two buttons to t
 - Buttons use Visual Studio theme icons and a borderless hover style to blend into the native toolbar
 - Buttons are re-added automatically after the window content is rebuilt
 
-Open View > Git Changes; the two buttons appear at the front of the window's top toolbar.
+Open View > Git Changes; the two buttons appear right before the Commit All button.
 
 Supported versions:
 
