@@ -4,6 +4,8 @@
 
 # Git Changes Toolbox · [English](README.md)
 
+![Demo](src/GitChangesToolbox/Resources/DEMO.gif)
+
 Git Changes Toolbox 是一个 Visual Studio 2022 扩展，为「Git 更改」窗口增加两个工具栏按钮：一键折叠/展开更改树，以及定位到当前打开的文件。
 
 ## 功能

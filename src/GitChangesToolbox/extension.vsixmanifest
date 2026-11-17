@@ -3,7 +3,51 @@
 	<Metadata>
 		<Identity Id="GitChangesToolbox.Probe" Version="1.7" Language="en-US" Publisher="Local" />
 		<DisplayName>Git Changes Toolbox</DisplayName>
-		<Description xml:space="preserve">Adds collapse/expand and locate buttons to the Visual Studio Git Changes window.</Description>
+		<Description xml:space="preserve"># Git Changes Toolbox
+
+![Git Changes Toolbox demo](https://raw.githubusercontent.com/Chendaqian/GitChangesToolbox/master/src/GitChangesToolbox/Resources/DEMO.gif)
+
+## 中文
+
+Git Changes Toolbox 是一款 Visual Studio 2022 扩展，在「Git 更改」窗口顶部工具栏加入两个按钮，折叠、展开和定位文件都不用再翻菜单。
+
+- 一键折叠所有已展开的文件夹
+- 折叠状态下再次点击，展开全部文件夹，图标和提示文字同步切换
+- 一键定位当前活动文件：自动展开父级文件夹、选中并滚动到目标
+- 当前文件不在更改列表时，状态栏给出提示
+- 按钮使用 Visual Studio 主题图标和无边框悬停样式，与原生工具栏融为一体
+- 窗口内容重建后按钮自动补回
+
+打开「视图 &gt; Git 更改」，两个按钮出现在窗口顶部工具栏最前面。
+
+支持以下版本：
+
+- Visual Studio 2022（17.x，64 位）
+- .NET Framework 4.7.2 或更高版本
+- Windows
+
+处理大型解决方案时，把翻找文件的时间省下来，专注在代码上。
+
+## English
+
+Git Changes Toolbox is a Visual Studio 2022 extension that adds two buttons to the top toolbar of the Git Changes window, so collapsing the tree and finding the active file no longer take extra clicks.
+
+- Collapse every expanded folder in one click
+- Click again in the collapsed state to expand all folders; the icon and tooltip switch with the state
+- Locate the active file in one click: parent folders expand, the file is selected and scrolled into view
+- A status bar message appears when the current file is not in the change list
+- Buttons use Visual Studio theme icons and a borderless hover style to blend into the native toolbar
+- Buttons are re-added automatically after the window content is rebuilt
+
+Open View &gt; Git Changes; the two buttons appear at the front of the window's top toolbar.
+
+Supported versions:
+
+- Visual Studio 2022 (17.x, 64-bit)
+- .NET Framework 4.7.2 or later
+- Windows
+
+Spend less time hunting through the change list in large solutions and more time in code.</Description>
 		<MoreInfo>https://github.com/Chendaqian/GitChangesToolbox</MoreInfo>
 		<Icon>Resources\icon.png</Icon>
 		<Tags>Git, Changes, Productivity</Tags>

@@ -4,6 +4,8 @@
 
 # Git Changes Toolbox · [简体中文](README.zh-CN.md)
 
+![Demo](src/GitChangesToolbox/Resources/DEMO.gif)
+
 Git Changes Toolbox is a Visual Studio 2022 extension that adds two toolbar buttons to the Git Changes window: collapse or expand the change tree in one click, and locate the file you are currently editing.
 
 ## Features
