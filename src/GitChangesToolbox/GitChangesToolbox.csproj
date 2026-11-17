@@ -1,0 +1,135 @@
+﻿<Project>
+
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>17.0</MinimumVisualStudioVersion>
+    <VSRoot>C:\Program Files\Microsoft Visual Studio\2022\Enterprise</VSRoot>
+    <PublicAssemblies>$(VSRoot)\Common7\IDE\PublicAssemblies</PublicAssemblies>
+    <NuGetRoot>$(UserProfile)\.nuget\packages</NuGetRoot>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GitChangesToolbox</RootNamespace>
+    <AssemblyName>GitChangesToolbox.Probe</AssemblyName>
+    <UseWPF>true</UseWPF>
+    <LangVersion>7.3</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GeneratePkgDefFile>true</GeneratePkgDefFile>
+    <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
+    <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
+    <CreateVsixContainer>true</CreateVsixContainer>
+    <DeployExtension>false</DeployExtension>
+    <UseCodebase>true</UseCodebase>
+    <VsixType>v3</VsixType>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <ApplicationIcon>Resources\GitCat.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\GitCat.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.14.2142" PrivateAssets="all" />
+
+    <Reference Include="Microsoft.VisualStudio.Shell.15.0">
+      <HintPath>$(NuGetRoot)\microsoft.visualstudio.shell.15.0\17.14.40264\lib\net472\Microsoft.VisualStudio.Shell.15.0.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Framework">
+      <HintPath>$(NuGetRoot)\microsoft.visualstudio.shell.framework\17.14.40264\lib\net472\Microsoft.VisualStudio.Shell.Framework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Utilities">
+      <HintPath>$(NuGetRoot)\microsoft.visualstudio.utilities\17.14.40264\lib\net472\Microsoft.VisualStudio.Utilities.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Validation">
+      <HintPath>$(NuGetRoot)\microsoft.visualstudio.validation\17.8.8\lib\netstandard2.0\Microsoft.VisualStudio.Validation.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Telemetry">
+      <HintPath>$(NuGetRoot)\microsoft.visualstudio.telemetry\17.14.18\lib\net45\Microsoft.VisualStudio.Telemetry.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Threading">
+      <HintPath>$(NuGetRoot)\microsoft.visualstudio.threading.only\17.14.15\lib\net472\Microsoft.VisualStudio.Threading.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Interop">
+      <HintPath>$(NuGetRoot)\microsoft.visualstudio.interop\17.14.40260\lib\net472\Microsoft.VisualStudio.Interop.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Imaging">
+      <HintPath>$(NuGetRoot)\microsoft.visualstudio.imaging\17.14.40264\lib\net472\Microsoft.VisualStudio.Imaging.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime">
+      <HintPath>$(PublicAssemblies)\Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ImageCatalog">
+      <HintPath>$(NuGetRoot)\microsoft.visualstudio.imagecatalog\17.14.40260\lib\net472\Microsoft.VisualStudio.ImageCatalog.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop">
+      <HintPath>$(PublicAssemblies)\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0">
+      <HintPath>$(PublicAssemblies)\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0">
+      <HintPath>$(PublicAssemblies)\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0">
+      <HintPath>$(PublicAssemblies)\Microsoft.VisualStudio.Shell.Interop.10.0.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop">
+      <HintPath>$(PublicAssemblies)\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0">
+      <HintPath>$(PublicAssemblies)\Microsoft.VisualStudio.Shell.Immutable.10.0.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0">
+      <HintPath>$(PublicAssemblies)\Microsoft.VisualStudio.Shell.Immutable.11.0.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.12.0">
+      <HintPath>$(PublicAssemblies)\Microsoft.VisualStudio.Shell.Immutable.12.0.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.14.0">
+      <HintPath>$(PublicAssemblies)\Microsoft.VisualStudio.Shell.Immutable.14.0.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="envdte">
+      <HintPath>$(PublicAssemblies)\envdte.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="source.extension.vsixmanifest" />
+  </ItemGroup>
+
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="Exists('$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets')" />
+
+</Project>

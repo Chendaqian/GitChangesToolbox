@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable">
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+
+  <Commands package="guidGitChangesToolboxPackage">
+    <Buttons>
+      <Button guid="guidGitChangesToolboxCommandSet" id="DumpGitChangesWindowCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />
+        <Strings>
+          <ButtonText>Dump Git Changes Window</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidGitChangesToolboxPackage" value="{8f2c1a7e-4b3d-4c1e-9a55-6d7e8f9a0b11}" />
+    <GuidSymbol name="guidGitChangesToolboxCommandSet" value="{3c5e7a9b-1d2f-4a6b-8c9d-0e1f2a3b4c5d}">
+      <IDSymbol name="DumpGitChangesWindowCommandId" value="0x0100" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
