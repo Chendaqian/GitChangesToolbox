@@ -79,4 +79,4 @@ All access to internal types goes through reflection; `Microsoft.TeamFoundation.
 
 ## Version
 
-Current version: 1.7
+Current version: 1.8
